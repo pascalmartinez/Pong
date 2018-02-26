@@ -1,0 +1,99 @@
+
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+  	<link rel="stylesheet" href="bootstrap.min.css">
+	
+
+	<title>PONGILONG</title>
+
+</head>
+<body>
+
+	<div class="container" >
+		<div class="col-12 col-lg-10 offset-lg-1 offset-3 row">
+			<div>
+			<h1><img src="images/logo-pong-vgo_360.gif" width="300"></h1>
+			</div>
+
+			<div>
+
+				<h2>Règles du jeux</h2>
+
+					<p>Le concept original de Pong est une simulation simpliste de tennis de table ou ping-pong, repris pour le nom du jeu. Une balle, représentée par un petit carré blanc, se déplace à travers l'écran et rebondit sur les rebords du haut et du bas. Les deux joueurs commandent chacun une raquette, représentée par un trait vertical aux extrémités gauche et droite du terrain de jeu. Dans la version originale, l'interface est dotée d'une ligne centrale en pointillés, séparant l'écran en deux et représentant le filet vu du dessus. Les bords de l'écran matérialisent les limites du terrain, la balle ne pouvant pas sortir par le haut ou le bas. Ces délimitations sont présentes dans la plupart des versions ultérieures mais avec des styles différents, selon les choix des développeurs. Enfin, les scores de chaque joueur sont affichés en haut de leur zone respective.</p>
+
+					<p>Si la balle frappe la raquette, elle rebondit vers l'autre joueur. Si elle manque la raquette, l'autre joueur marque un point. La vitesse de la balle augmente au cours de la partie, jusqu'à ce que l'un des joueurs perde le point2. L'angle de rebond de la balle change en fonction de l'impact avec la raquette. Le joueur déplace cette raquette en la faisant glisser verticalement entre les extrémités de l'écran à l'aide des contrôles:</p>
+			</div>
+
+					<div class="offset-2">
+
+					
+					<P>Touche Player 1 </P>
+
+					<img src="images/z.jpg" width="80" height="80">
+					<img src="images/s.jpg" width="80" height="80">
+
+					</div>	
+
+					<div >
+						
+							<div class="col-12 col-lg-5 offset-lg-2 offset-4 row" >
+								
+								<div class="dropdow ">
+									<p>Difficulté</p>
+									<select  >
+										<option value="1">Niveau 1</option>
+										<option value="2">Niveau 2</option>
+										<option value="3">Niveau 3</option>
+										<option value="4">Niveau 4</option>	
+										<option value="5">Niveau 5</option>
+										<option value="6">Niveau 6</option>
+										<option value="7">Niveau 7</option>
+										<option value="8">Niveau 8</option>
+										<option value="9">Niveau 9</option>
+										<option value="10">Niveau 10</option>
+
+									</select>
+									
+									
+								</div>
+
+								
+								<div id="menu"><input id="startGame" type="button" value="Start Game"></div>	
+									
+								
+							</div>
+					</div>					
+
+
+					<div class="offset-1">
+					<p>Touche Player 2 </p>
+
+					<img src="images/haut.jpg" width="80" height="80">
+					<img src="images/bas.jpg" width="80" height="80">
+
+					</div>
+						
+					<div id="player1" class="col-12 col-lg-8 offset-lg-3 offset-4 row" style="font-size: 40px"></div>
+					
+					
+			
+		</div>
+	</div>
+
+<div class="col-12 col-lg-6  offset-lg-4 offset-4 row" >
+	
+	<canvas id="canvas" width="400" height="400" style="border:2px solid grey; background-image: url(images/texture.jpg)";>
+	</canvas>
+</div>
+			
+	
+<script src="pongv1.2b.js"></script>
+<script src="pong_pascal.js"></script>
+
+<!--<script src="pong_pascal.js"></script>-->
+
+</body>
+</html>

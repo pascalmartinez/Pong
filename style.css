@@ -1,0 +1,62 @@
+body
+{
+
+	background-image: url("images/back2.jpg");
+	text-align: justify;
+	background-repeat: none;
+
+}	
+
+p{
+	text-align: center;
+}	
+
+/*
+[class*="off"]
+{
+	border:2px solid yellow;
+}
+
+
+[class*="col-"]
+{
+	border:2px solid yellow;
+}*/
+
+.container{
+	color: white;
+	text-align: justify;
+	font-size: 14px;
+}
+
+
+.box
+{
+	display: flex;
+}
+
+.boxctr
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#startGame
+{
+
+	background:    #ffffff;
+	border-radius: 5px;
+	padding:       8px 20px;
+	color:         #000000;
+	display:       inline-block;
+	font:          normal 700 24px/1 "Calibri", sans-serif;
+	text-align:    center;
+	text-shadow:   1px 1px #000000;
+}
+
+.dropdown
+{
+	width: 150px;
+}
+
+

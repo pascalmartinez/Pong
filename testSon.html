@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" href="/static/style/style.css"/>
+
+<link rel="icon" type="image/png" href="/static/style/favicon.png" />
+<script src="/static/utils.js"></script>
+<title>Comment jouer un son en javascript</title>
+<meta name="description" content=""</meta>
+</head>
+
+<body>
+<header>
+<div id="langue_selection">
+
+  
+  
+    <a href="/engineering-blog/javascript-play-sound"><img src="/static/style/drapeau_anglais.png" alt="website in english"></a>
+  
+
+</div>
+</header>
+
+
+
+
+
+  <div id="fb-root"></div>
+<footer>
+<article id="boite-company" class="mediaLeft">
+<a href="/"><img id="logo_company" class="blockleft" src="/static/style/bleezworld_logo.png"/></a>
+<div class="blockright">
+
+<p><a href="/">BleezWorld</a><br/> La technologie simplement.</p>
+
+</div>
+</article>
+
+
+</footer>
+
+
+<section>
+
+<div id="calendar"><p>22 Déc 2008</p></div>
+<article class="tech">
+<h1>Comment jouer un son en javascript</h1>
+<script>
+function $(x) {return document.getElementById(x);}
+function play_music() {
+  $('music').innerHTML = '<object type="audio/mpeg" width="0" height="0" data="/static/download/roulement_tambour.mp3"><param name="filename" value="roulement_tambour.mp3" /><param name="autostart" value="true" /><param name="loop" value="false" /></object>';
+}
+
+function stop_music() {
+  $('music').innerHTML = '';
+}
+</script>
+
+<div id="music"></div>
+
+<p><span style="color:blue; text-decoration: underline;" onclick="play_music()">Play</span> <span onclick="stop_music()" style="color:blue; text-decoration: underline;">Stop</span></p>
+<object type="audio/mpeg" width="0" height="0" data="/static/download/roulement_tambour.mp3">
+	<param name="filename" value="roulement_tambour.mp3"/>
+	<param name="autostart" value="false"/>
+	<param name="loop" value="false"/>
+</object>
+</div>
+
+
+<p>Une petite astuce pour jouer un son avec Javascript que l'on vient de découvrir. Vous savez sans doute qu'une manière <em>valide W3C</em> de lire de la musique (purement HTML) est celle-ci :<br/>
+<span class="code">&lt;object type="audio/mpeg" width="100" height="40" data="monmp3.mp3"&gt;<br/>
+&lt;param name="filename" value="monmp3.mp3" /&gt;<br/>
+&lt;param name="autostart" value="true" /&gt;<br/>
+&lt;param name="loop" value="false" /&gt;<br/>
+&lt;/object&gt;</span></p>
+
+<p>L'astuce consiste à voir que si l'on met ce code, ça joue la musique, et si on le retire, ça ne joue rien, et si l'on met ce code avec <span class="code">autostart="false"</span> ça télécharge la musique, mais ça ne la joue pas. Il faut donc s'amuser avec ça en Javascript pour arriver à l'effet désiré.</p>
+
+<p>Pour ce faire, on met ce code HTML dans <span class="code">&lt;div id="divmusic"&gt;</span> avec <span class="code">autostart = false</span>, comme ça la musique se télécharge automatiquement sans se jouer. Au clic sur le bouton "Play", on met autostart = true et ça joue. (pour ce faire, en pratique, on réécrit tout le 'object' dans le innerHTML du div, avec autostart = true).
+Pour <em>arrêter la musique</em>, on supprime l'objet (pratiquement : <span class="code">innerHTML = ''</span>).</p>
+<p>Référez vous au script dans le code source de la page pour voir comment c'est fait.</p>
+</article>
+</section>
+
+
+  <div id="fb-root"></div>
+<footer>
+<article id="boite-company" class="mediaLeft">
+<a href="/"><img id="logo_company" class="blockleft" src="/static/style/bleezworld_logo.png"/></a>
+<div class="blockright">
+
+<p><a href="/">BleezWorld</a><br/> La technologie simplement.</p>
+
+</div>
+</article>
+
+
+</footer>
+
+
+  
+  <p id="pub_missions">BleezWorld peut <a href="/">réaliser des missions</a> pour vous. Consultez nous.</p>
+  
+
+
+<img id="email_contact" src="/static/style/contact_mail_footer.png"/>
+
+</body>
+</html>
